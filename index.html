@@ -5,112 +5,94 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FABLE</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #f0f0f0;
-    text-align: center;
-    overflow: hidden;
+body{
+    font-family:'Poppins',sans-serif;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    background:
+        linear-gradient(rgba(60,0,90,0.55), rgba(10,10,40,0.75)),
+        url("background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
 }
 
-/* ===== Background Image Layer ===== */
-.background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: url('background.jpg') no-repeat center center/cover;
-    z-index: -3;
+.container{
+    max-width:800px;
+    padding:20px;
+    animation:fadeIn 1.8s ease-in-out;
 }
 
-/* ===== Dark Navy Overlay ===== */
-.overlay-dark {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        rgba(8,20,40,0.85),
-        rgba(10,25,55,0.9)
-    );
-    z-index: -2;
+h1{
+    font-size:60px;
+    letter-spacing:8px;
+    font-weight:600;
+    margin-bottom:20px;
 }
 
-/* ===== Cinematic Purple Glow ===== */
-.overlay-glow {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 70% 30%, rgba(130,90,255,0.25), transparent 60%);
-    z-index: -1;
+p{
+    font-size:20px;
+    font-weight:300;
+    margin-bottom:40px;
 }
 
-/* ===== Content ===== */
-.container {
-    max-width: 600px;
+.buttons{
+    display:flex;
+    gap:25px;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
-h1 {
-    font-size: 3rem;
-    letter-spacing: 8px;
-    margin-bottom: 20px;
+.buttons a{
+    text-decoration:none;
+    color:white;
+    border:2px solid rgba(255,255,255,0.7);
+    padding:14px 40px;
+    border-radius:40px;
+    font-size:18px;
+    transition:0.4s ease;
+    backdrop-filter:blur(6px);
 }
 
-p {
-    font-weight: 300;
-    margin-bottom: 40px;
-    font-size: 1.1rem;
+.buttons a:hover{
+    background:rgba(255,255,255,0.2);
+    transform:scale(1.05);
 }
 
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+footer{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    font-size:14px;
+    opacity:0.7;
 }
 
-.buttons a {
-    padding: 15px 40px;
-    border-radius: 50px;
-    border: 1px solid rgba(255,255,255,0.6);
-    text-decoration: none;
-    color: #ffffff;
-    transition: 0.4s ease;
-    backdrop-filter: blur(8px);
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
 }
 
-.buttons a:hover {
-    background: rgba(130,90,255,0.3);
-    border-color: rgba(130,90,255,0.7);
-    transform: translateY(-3px);
-}
-
-/* Footer */
-footer {
-    position: absolute;
-    bottom: 30px;
-    width: 100%;
-    font-size: 0.9rem;
-    opacity: 0.7;
+@media(max-width:768px){
+    h1{font-size:42px;}
+    p{font-size:16px;}
 }
 </style>
 </head>
 
 <body>
-
-<div class="background"></div>
-<div class="overlay-dark"></div>
-<div class="overlay-glow"></div>
 
 <div class="container">
     <h1>FABLE</h1>
@@ -123,9 +105,7 @@ footer {
     </div>
 </div>
 
-<footer>
-© 2026 FABLE
-</footer>
+<footer>© 2026 FABLE</footer>
 
 </body>
 </html>

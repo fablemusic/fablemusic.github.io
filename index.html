@@ -1,94 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FABLE</title>
 
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #f6d5f7, #c7f9ff);
+  font-family: 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to bottom, #fdfbfb, #ebedee);
   color: #222;
   text-align: center;
 }
 
-.container {
+header {
   padding: 80px 20px;
-}
-
-h2 {
-  font-weight: 400;
-  letter-spacing: 2px;
-  opacity: 0.6;
 }
 
 h1 {
   font-size: 56px;
   letter-spacing: 6px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-p {
+.tagline {
   font-size: 18px;
   max-width: 500px;
   margin: 0 auto 40px;
   line-height: 1.6;
+  opacity: 0.8;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .button {
-  display: inline-block;
-  margin: 10px;
   padding: 14px 28px;
-  border-radius: 30px;
-  background: #111;
-  color: white;
+  border: 2px solid #222;
   text-decoration: none;
+  color: #222;
   font-weight: bold;
   transition: 0.3s ease;
 }
 
 .button:hover {
-  background: #ff4ecd;
-  transform: translateY(-3px);
+  background: #222;
+  color: white;
 }
 
 footer {
-  margin-top: 60px;
-  font-size: 14px;
+  margin-top: 100px;
+  padding-bottom: 40px;
   opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
 }
 </style>
 </head>
 
 <body>
-<div class="container">
 
-<h2>Official Website</h2>
+<header>
+  <h1>FABLE</h1>
+  <div class="tagline">
+    Luminous Indie Pop with modern electronic textures and intimate vocal clarity.
+  </div>
 
-<h1>FABLE</h1>
-
-<p>
-Luminous Indie Pop with modern electronic textures  
-and intimate vocal clarity.
-</p>
-
-<a class="button" href="https://fablelive.bandcamp.com" target="_blank">
-Listen on Bandcamp
-</a>
-
-<a class="button" href="https://youtube.com/@sheisfable" target="_blank">
-Watch on YouTube
-</a>
-
-<a class="button" href="https://instagram.com/sheisfable" target="_blank">
-Follow on Instagram
-</a>
+  <div class="buttons">
+    <a class="button" href="https://fablelive.bandcamp.com" target="_blank">Bandcamp</a>
+    <a class="button" href="https://youtube.com/@shesisfable" target="_blank">YouTube</a>
+    <a class="button" href="https://instagram.com/sheisfable" target="_blank">Instagram</a>
+  </div>
+</header>
 
 <footer>
-© 2026 FABLE
+  © 2026 FABLE
 </footer>
 
-</div>
 </body>
 </html>

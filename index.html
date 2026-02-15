@@ -9,60 +9,66 @@
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
-  background: black;
   color: white;
   text-align: center;
+  background: linear-gradient(135deg, #0f1c2e, #162a46, #1c355e);
 }
 
+/* Hero Section */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-              url('https://images.unsplash.com/photo-1511379938547-c1f69419868d');
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
+/* Title */
 h1 {
-  font-size: 70px;
+  font-size: 68px;
   letter-spacing: 10px;
   margin-bottom: 20px;
 }
 
+/* Tagline */
 .tagline {
   font-size: 20px;
   max-width: 600px;
   margin-bottom: 40px;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
+/* Buttons */
 .buttons {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
 }
 
 .button {
-  padding: 14px 30px;
-  border: 2px solid white;
-  color: white;
+  padding: 14px 32px;
+  border: 2px solid #7ea6ff;
+  color: #7ea6ff;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
+  transition: 0.3s ease;
+  border-radius: 6px;
 }
 
 .button:hover {
-  background: white;
-  color: black;
+  background: #7ea6ff;
+  color: #0f1c2e;
 }
 
+/* Footer */
 footer {
-  padding: 20px;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
   opacity: 0.6;
+  font-size: 14px;
 }
 
 /* Responsive */
@@ -70,6 +76,10 @@ footer {
   h1 {
     font-size: 42px;
     letter-spacing: 6px;
+  }
+
+  .tagline {
+    font-size: 16px;
   }
 }
 </style>
@@ -84,8 +94,8 @@ footer {
   </div>
 
   <div class="buttons">
-    <a class="button" href="https://fablelive.bandcamp.com" target="_blank">Bandcamp</a>
-    <a class="button" href="https://youtube.com/@sheisfable" target="_blank">YouTube</a>
+    <a class="button" href="https://fable.bandcamp.com" target="_blank">Bandcamp</a>
+    <a class="button" href="https://youtube.com/@thisisfable" target="_blank">YouTube</a>
     <a class="button" href="https://instagram.com/sheisfable" target="_blank">Instagram</a>
   </div>
 </div>
